@@ -1,0 +1,58 @@
+MDScreen:
+        # Set the screen name
+        name: "my_kid"
+        MDFloatLayout:
+                md_bg_color: rgba(246, 250, 255, 255)
+                MDIconButton:
+                        icon: "arrow-left"
+                        pos_hint: {"center_x": .07, "center_y": .91}
+                        user_font_size: "20sp"
+                        theme_text_color: "Custom"
+                        text_color: rgba(71, 92, 119, 225)
+                        on_release:
+                                root.manager.transition.direction = "right"
+                                root.manager.current = "dashboard"
+
+
+
+        MDBoxLayout:
+                size_hint_y: .25
+                padding: dp(25)
+                pos_hint: {"center_y": .90, "center_x": .55}
+                MDBoxLayout:
+                        orientation:"vertical"
+                        MDLabel:
+                                text: "Axel's Profile"
+                                font_style: "H4"
+                                font_name: "assets/Poppins-Bold.ttf"
+
+        MDFloatLayout:
+                Image:
+                        source: "assets/crafting.png"
+                        allow_stretch: False
+                        pos_hint: {"center_x": .25, "center_y": .70}
+
+        MDFloatLayout:
+                Image:
+                        source: "assets/art.png"
+                        allow_stretch: False
+                        pos_hint: {"center_x": .25, "center_y": .30}
+
+        MDLabel:
+                text: "Crafting Badge"
+                font_name: "assets/Poppins-Bold.ttf"
+                font_size: "18sp"
+                size_hint_x: .85
+                pos_hint: {"center_x": .70, "center_y": .80}
+                halign: "center"
+
+
+        MDLabel:
+                text: "Artist Badge"
+                font_name: "assets/Poppins-Bold.ttf"
+                font_size: "18sp"
+                size_hint_x: .85
+                pos_hint: {"center_x": .7, "center_y": .40}
+                halign: "center"
+
+

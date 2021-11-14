@@ -1,0 +1,83 @@
+MDScreen:
+        # Set the screen name
+        name: "parent_profile_screen1"
+        MDFloatLayout:
+                md_bg_color: 1, 1, 1, 1
+                MDIconButton:
+                        icon: "arrow-left"
+                        pos_hint: {"center_y": .95}
+                        user_font_size: "30sp"
+                        theme_text_color: "Custom"
+                        text_color: rgba(26,24,58,255)
+
+        MDFloatLayout:
+                md_bg_color: 1, 1, 1, 1
+                Image:
+                        source: "Assets/user.png"
+                        size_hint: 1, 1
+                        pos_hint: {"center_x": .5, "center_y": .80}
+
+        MDFloatLayout:
+                size_hint: .5, .7
+                pos_hint: {"center_x":.4, "center_y":.35}
+                TextInput:
+                        hint_text: "Name"
+                        font_name: "MPoppins"
+                        size_hint_y: .75
+                        pos_hint: {"center_x": .43, "center_y": .5}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0,0,59, 225)
+                        cursor_color: rgba(0,0,59,255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y":.80}
+                        size_hint_y: .005
+                        md_bg_color: rgba(178, 178, 178, 255)
+
+
+        MDFloatLayout:
+                size_hint: .5, .7
+                pos_hint: {"center_x":.40, "center_y":.25}
+                TextInput:
+                        hint_text: "Age"
+                        font_name: "MPoppins"
+                        size_hint_y: .75
+                        pos_hint: {"center_x": .43, "center_y": .5}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0,0,59, 225)
+                        cursor_color: rgba(0,0,59,255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y":.80}
+                        size_hint_y: .005
+                        md_bg_color: rgba(178, 178, 178, 255)
+
+        MDDropDownItem:
+                id: drop_item
+                text: "Choose languages you speak"
+                font_name: "MPoppins"
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        Button:
+                text: "CONTINUE"
+                size_hint: .66, .065
+                pos_hint: {"center_x": .5, "center_y": .15}
+                background_colour: 0, 0, 0, 0
+                font_name: "BPoppins"
+                on_release:
+                        root.manager.transition.direction = "left"
+                        root.manager.current = "parent_profile_screen2"
+                canvas.before:
+                        Color:
+                                rgb: rgba(149, 125, 173, 1)
+                        RoundedRectangle:
+                                size: self.size
+                                pos: self.pos
+                                radius: [5]
+
+
+
