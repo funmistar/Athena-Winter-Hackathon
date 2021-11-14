@@ -4,7 +4,7 @@ Submission from Vita Stefane, Funmi Falegan, Karandeep Kaur
 
 # How it works
 
-![alt-text](https://github.com/funmistar/Athena-Winter-Hackathon/blob/Final/Sparents/Sparents%20Gif.gif?raw=true)
+![alt-text](https://github.com/funmistar/Athena-Winter-Hackathon/blob/Final/Sparents/Sparents%20Gif%20-%20Final%20Branch.gif?raw=true)
 
 To run the Sparents app, open the “Final” Branch” and run the “slope.py” file. Please ensure you install all of the relevant dependencies.
 
