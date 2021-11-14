@@ -1,0 +1,116 @@
+MDScreen:
+        name: "profile"
+        MDFloatLayout:
+                md_bg_color: 1, 1, 1, 1
+                MDIconButton:
+                        icon: "arrow-left"
+                        pos_hint: {"center_y": .95}
+                        user_font_size: "30sp"
+                        theme_text_color: "Custom"
+                        text_color: rgba(26,24,58,255)
+                        on_release:
+                                root.manager.transition.direction = "right"
+                                root.manager.current = "dashboard"
+
+        MDLabel:
+                text: "Profile Preferences"
+                font_name: "assets/Poppins-SemiBold.ttf"
+                font_size: "24sp"
+                pos_hint: {"center_y": .93}
+                halign: "center"
+                color: rgba(0,0,59, 255)
+
+        MDGridLayout:
+                padding: dp(10)
+                spacing: dp(18)
+                cols: 1
+                adaptive_height: True
+
+                MDLabel:
+                        text: "Select age group: "
+                MDSeparator:
+                MDChooseChip:
+                        MDChip:
+                                text: "18-25"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "26-35"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "36-50"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+
+                        MDChip:
+                                text: "50+"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+
+                MDLabel:
+                        text: "Select status: "
+                MDSeparator:
+                MDChooseChip:
+                        MDChip:
+                                text: "Parent seeking help"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "Helper"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "Both"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+
+                MDLabel:
+                        text: "Select language: "
+                MDSeparator:
+                MDChooseChip:
+                        MDChip:
+                                text: "English"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "Hindi"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "Italian"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+
+                        MDChip:
+                                text: "French"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+
+                        MDChip:
+                                text: "Dutch"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                MDLabel:
+                        text: "Select pre-meet briefing preference: "
+                MDSeparator:
+                MDChooseChip:
+                        MDChip:
+                                text: "Video Call"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "Face-to-Face"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+                        MDChip:
+                                text: "Direct message"
+                                callback: app.callback
+                                selected_chip_color: rgba(71, 92, 119, 225)
+        MDTextButton:
+                text: "Reset profile preferences"
+                font_name: "assets/Poppins-Medium.ttf"
+                font_size: "13sp"
+                theme_text_color: "Custom"
+                text_color: rgba(71, 92, 119, 225)
+                pos_hint: {"center_x": .47, "center_y": .87}

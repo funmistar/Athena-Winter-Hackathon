@@ -1,0 +1,56 @@
+MDScreen:
+        # Set the screen name
+        name: "main"
+        MDFloatLayout:
+                md_bg_color: 1, 1, 1, 1
+        MDLabel:
+                text: "W E L C O M E !"
+                font_name: "assets/Poppins-Bold.ttf"
+                font_size: "23sp"
+                pos_hint: {"center_y": .38}
+                halign: "center"
+                color: rgba(0,0,59, 255)
+        Image:
+                source: "assets/sparents.png"
+                allow_stretch: False
+                anim_delay: 0.05
+                anim_reset: True
+                pos_hint: {"center_x": .5, "center_y": .50}
+
+        MDLabel:
+                text: "Dont get stressed. Get community."
+                font_name: "assets/Poppins-Medium.ttf"
+                font_size: "15sp"
+                size_hint_x: .85
+                pos_hint: {"center_x": .5, "center_y": .30}
+                halign: "center"
+                color: rgba(127,127,127, 255)
+        Image:
+                source:"assets/sheep.gif"
+                allow_stretch: False
+                anim_delay: 0.05
+                anim_reset: True
+                pos_hint: {"center_x": .5, "center_y": .75}
+        Button:
+                text: "GET STARTED"
+                size_hint: .66, .065
+                pos_hint: {"center_x": .5, "center_y": .15}
+                background_color: 0,0,0,0
+                font_name: "assets/Poppins-Bold.ttf"
+                on_release:
+                        root.manager.transition.direct = "left"
+                        root.manager.current = "login"
+                canvas.before:
+                        Color:
+                                rgb: rgba(149, 125, 173, 1)
+                        RoundedRectangle:
+                                size: self.size
+                                pos: self.pos
+                                radius: [5]
+
+
+
+
+
+
+
