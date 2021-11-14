@@ -1,0 +1,134 @@
+MDScreen:
+        # Set the screen name
+        name: "community"
+        MDFloatLayout:
+                md_bg_color: rgba(246, 250, 255, 255)
+                MDIconButton:
+                        icon: "arrow-left"
+                        pos_hint: {"center_x": .07, "center_y": .91}
+                        user_font_size: "20sp"
+                        theme_text_color: "Custom"
+                        text_color: rgba(71, 92, 119, 225)
+                        on_release:
+                                root.manager.transition.direction = "right"
+                                root.manager.current = "dashboard"
+
+
+
+        MDBoxLayout:
+                size_hint_y: .25
+                padding: dp(25)
+                pos_hint: {"center_y": .90, "center_x": .55}
+                MDBoxLayout:
+                        orientation:"vertical"
+                        MDLabel:
+                                text: "My Community"
+                                font_style: "H4"
+                                font_name: "assets/Poppins-Bold.ttf"
+
+                        MDLabel:
+                                text: "Suggested groups in your area"
+                                font_name: "assets/Poppins-Bold.ttf"
+                                font_size: "12sp"
+
+
+        MDGridLayout:
+                size_hint_y:.85
+                cols:2
+                padding:[dp(15),dp(15),dp(15),dp(35)]
+                spacing:dp(15)
+                ElementCard:
+                        image: "assets/star.png"
+                        size: "150dp", "120dp"
+                        text: "Create new group +"
+                        image: "assets/star.png"
+                        md_bg_color:236/255,99/255,131/255,1
+                        font_name: "assets/Poppins-Medium.ttf"
+
+
+        MDGridLayout:
+                size_hint_y:.60
+                cols:1
+                padding:[dp(15),dp(15),dp(15),dp(35)]
+                spacing:dp(15)
+                ElementCard:
+                        size: "150dp", "200dp"
+                        text: "Sporty Mums"
+                        image: "assets/star.png"
+                        text_color: 1,1,1,1
+                        subtext: "Join the group"
+                        md_bg_color:244/255,181/255,222/255,1
+                        font_name: "assets/Poppins-Medium.ttf"
+
+        MDGridLayout:
+                size_hint_y:.25
+                cols:1
+                padding:[dp(15),dp(15),dp(15),dp(35)]
+                spacing:dp(15)
+                ElementCard:
+                        md_bg_color:134/255,103/255,247/255,1
+                        image: "assets/star.png"
+                        size: "150dp", "100dp"
+                        text: "Children with diabetes"
+                        font_name: "assets/Poppins-Medium.ttf"
+
+        MDGridLayout:
+                size_hint_y:.85
+                pos_hint: {"center_x": 1}
+                cols: 1
+                padding:[dp(15),dp(15),dp(15),dp(35)]
+                spacing:dp(15)
+                ElementCard:
+                        image: "assets/star.png"
+                        size: "150dp", "150dp"
+                        text: "Painting Club"
+                        font_name: "assets/Poppins-Medium.ttf"
+                        subtext: "Join the group"
+                        md_bg_color:134/255,103/255,247/255,1
+                        font_name: "assets/Poppins-Medium.ttf"
+
+
+        MDGridLayout:
+                size_hint_y:.55
+                pos_hint: {"center_x": 1}
+                cols: 1
+                padding:[dp(15),dp(15),dp(15),dp(35)]
+                spacing:dp(15)
+                ElementCard:
+                        image: "assets/star.png"
+                        size: "150dp", "150dp"
+                        text: "Weekend reading"
+                        subtext: "Join the group"
+                        md_bg_color:242/255,165/255,65/255,1
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ElementCard@MDCard>:
+        padding:16
+
+        radius:dp(25)
+
+
+
+
+
+        ripple_behavior: True
+        image:""
+        text:''
+
+
+
+        orientation:'vertical'
+
+
+
