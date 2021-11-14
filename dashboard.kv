@@ -1,0 +1,92 @@
+MDScreen:
+        # Set the screen name
+        name: "dashboard"
+        MDBoxLayout:
+                size_hint_y: .25
+                padding: dp(25)
+                pos_hint: {"center_y": .85}
+                MDBoxLayout:
+                        orientation:"vertical"
+                        MDLabel:
+                                text: "Gina's Account"
+                                font_style: "H4"
+                                font_name: "assets/Poppins-Bold.ttf"
+        MDIconButton:
+                icon: "assets/notification.png"
+                pos_hint: {"center_x": .85, "center_y": .75}
+                allow_stretch: False
+                anim_delay: 0.05
+                anim_reset: True
+                on_release:
+                        root.manager.transition.direction = "left"
+                        root.manager.current = "conversation"
+
+        MDGridLayout:
+                size_hint_y:.65
+                cols:2
+                padding:[dp(15),dp(15),dp(15),dp(35)]
+                spacing:dp(15)
+                ElementCard:
+                        image:"assets/task.png"
+                        text:"To-Do List"
+                        on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "todolist"
+                                #app.todolist
+
+                ElementCard:
+                        image:"assets/community.png"
+                        text:"Community"
+                        on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "community"
+                ElementCard:
+                        image:"assets/family-member.png"
+                        text:"My Kids"
+                        on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "my_kid"
+                ElementCard:
+                        image:"assets/setting.png"
+                        text:"Settings"
+                        on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "profile"
+
+
+
+
+
+
+<ElementCard@MDCard>:
+        md_bg_color:224/255,187/255,228/255,1
+        padding:16
+
+        radius:dp(25)
+
+        size_hint: None, None
+        size: "150dp", "150dp"
+
+
+        ripple_behavior: True
+        image:""
+        text:""
+
+
+        orientation:'vertical'
+        Image:
+                source:root.image
+        MDBoxLayout:
+                orientation:'vertical'
+                MDLabel:
+                        halign:"center"
+                        text:root.text
+
+                        font_name: "assets/Poppins-Bold.ttf"
+
+
+
+
+
+
+
