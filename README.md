@@ -1,5 +1,7 @@
 # Athena-Winter-Hackathon
 
+Submission from Vita Stefane, Funmi Falegan, Karandeep Kaur 
+
 # How it works
 
 ![alt-text](https://github.com/funmistar/Athena-Winter-Hackathon/blob/Final/Sparents/Sparents%20Gif.gif?raw=true)
